@@ -8,6 +8,7 @@ from Crypto.Signature import PKCS1_v1_5
 from click import Argument
 
 # Public and Private RSA keys can be generated through 'openssl req -new -x509 -newkey rsa:2048 -keyout Privkey.out -pubkey -out Pubkey.out -days 365 -nodes -sha256'
+# Run it with 'sudo -E' to give root access and also environment variable to access to sudo.
 parser=argparse.ArgumentParser()
 parser.add_argument('option')
 parser.add_argument('device')

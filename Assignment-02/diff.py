@@ -33,15 +33,12 @@ dir1.sort()
 dir2.sort()
 
 diff_list=list(set(dir1) ^ set(dir2))
-diff=""
 if diff_list:
     for i in diff_list:
-        print(i)
         if i in dir1:
-            diff=args.dir2
+            print("{} is missing in {}".format(i,args.dir2))
         else:
-            diff=args.dir1
-    print("These files are missing in {} directory.".format(diff))
+            print("{} is missing in {}".format(i,args.dir2))
     exit()
 else:
     for i in dir1:
